@@ -2,7 +2,6 @@ import eel
 from jinja2 import Template
 import os
 from pygame import mixer
-from math import exp, log
 
 eel.init("web", (".html", ".js"))
 mixer.init()
