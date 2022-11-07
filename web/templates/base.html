@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Music player</title>
+    <script type="text/javascript" src="/eel.js"></script>
+    <link rel="icon" type="image/png" href="../pngwing.com.png">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div align="center">
+    <h1>Музыка</h1>
+    <div class="line"></div>
+    {% set counter = namespace(value = 0) %}
+    {% for music in musics %}
+    <div>
+        <input class="music_btn" type="button" id="{{ counter.value }}" value="{{ music }}">
+    </div>
+    {% set counter.value = counter.value + 1 %}
+    {% endfor %}
+</div>
+<div class="navbar">
+    <div class="line" style="width: 100% !important;"></div>
+    <button class="btn_control"><img src="../before.png" id="bfr" alt="before"></button>
+    <button class="btn_control"><img src="../pause.png" id="p_s" alt="pause"></button>
+    <button class="btn_control"><img src="../before.png" id="afr" alt="after" style="transform: rotate(180deg);"></button>
+    <input type="range" min="0" max="100" value="50" id="volume_song">
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        crossorigin="anonymous"></script>
+<script src="../js/Functions.js"></script>
+
+</body>
+</html>
