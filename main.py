@@ -11,7 +11,7 @@ def Jinja_templates(base_file, file_name, musics):
     with open(f'web/templates/{base_file}', 'r+') as html:
         html = html.read()
         template = Template(html)
-        html = template.render(musics=musics)  # Изменить
+        html = template.render(musics=musics) # Изменить
 
     try:
         os.remove(f'web/templates/{file_name}')
